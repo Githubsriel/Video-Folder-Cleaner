@@ -96,6 +96,6 @@ After building, you’ll find your finished `.exe` in the `dist/` directory, rea
 
 ## 📄 License
 
-This project is licensed under the GPT3 License. Feel free to use and modify it.
+This project is licensed under the GPL3 License. Feel free to use and modify it.
 
 ---
