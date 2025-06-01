@@ -35,7 +35,7 @@ Video Folder Cleaner is a user-friendly desktop application designed to help you
 
 ## License
 
-MIT License
+GNU General Public License v3.0
 
 ---
 
