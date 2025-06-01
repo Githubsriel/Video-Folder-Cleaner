@@ -2,41 +2,100 @@
 
 **Version:** 1.0.0
 
-## Overview
+---
 
-Video Folder Cleaner is a user-friendly desktop application designed to help you organize and clean up your video collections efficiently. It scans a selected root folder containing multiple subfolders, identifies video files, and automates the management of video formats based on your preferences.
+## 🎞️ Overview
 
-## Key Features
-
-- **Scan Subfolders:** Quickly scans each subfolder for video files with popular formats like MP4, MOV, MKV, AVI, and more.
-- **MP4 Verification:** Detects whether a matching `.mp4` file exists for each folder based on folder name.
-- **Customizable Format Management:** Choose which video formats to keep or delete via an intuitive menu.
-- **Backup Option:** Optionally back up deleted files to a designated folder before removal.
-- **Automated Cleanup:** Moves folders missing MP4 files to a separate `no_mp4` folder and deletes unwanted formats automatically.
-- **Drag & Drop Support:** Easily select your root folder by dragging it into the application window.
-- **Progress Tracking:** Visual progress bar shows cleanup progress.
-- **Log File Generation:** Keeps a detailed log of all actions for transparency and troubleshooting.
-- **Portable Executable:** Runs as a standalone `.exe` with no installation required, customizable with your icon and version info.
-
-## Usage
-
-1. Launch the program.
-2. Select the root folder containing your video subfolders (or drag & drop it).
-3. Choose the video formats you want to delete or keep.
-4. Toggle backup on/off if desired.
-5. Click **Run Automated Cleanup** to start.
-6. Review the log and updated folder structure after completion.
-
-## Requirements
-
-- Windows OS
-- No installation needed — portable executable
-- Python included in the build (if running from source)
-
-## License
-
-GNU General Public License v3.0
+**Video Folder Cleaner** is a user-friendly, standalone desktop application that scans video folders, detects whether a correctly named `.mp4` file exists, and lets you automatically remove or back up other video formats. It’s ideal for video collectors, archivists, or anyone cleaning large video libraries.
 
 ---
 
-Made with ❤️ for easy and efficient video folder management.
+## ✅ Features
+
+* 🔍 **Scan subfolders** for videos named after the folder.
+* 🎯 **Check for `.mp4` availability** per folder.
+* ⚙️ **Select formats** to delete or keep via checkboxes.
+* 💾 **Backup option** for deleted files.
+* 📂 **Drag & drop support** for selecting folders.
+* 📊 **Progress bar** for automation steps.
+* 📜 **Log file output** to `cleaner_log.txt`.
+* 📦 **Single portable executable** (no install required).
+* 🖼️ **Custom icon** and version metadata embedded in `.exe`.
+
+---
+
+## 🛍️ How to Use
+
+1. **Launch the app** (run `VideoFolderCleaner.exe` or from Python).
+2. Click **Browse** or drag a folder into the window.
+3. Choose which formats to **delete** and **keep**.
+4. (Optional) Enable **Backup Deleted Files**.
+5. Click **Run Automated Cleanup**.
+6. Done! See `cleaner_log.txt` for operation history.
+
+---
+
+## 🏗️ Build Guide
+
+You can build your own portable `.exe` using the provided PowerShell script.
+
+### ⚖️ Requirements
+
+* Windows
+* Python 3.10 or newer
+* `pip` (comes with Python)
+* PowerShell 5+
+
+---
+
+### 📂 Project Structure Example
+
+```
+/project-folder/
+│
+├── main.py                 ← Your main Python script
+├── build.ps1               ← Build script (PowerShell)
+└── icon.ico                ← App icon
+
+```
+
+---
+
+### ▶️ One-Liner Build Command (PowerShell)
+
+To run the build script, open a PowerShell window in the project folder and paste:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass; .\build.ps1
+```
+
+> ℹ️ The script will install required dependencies and build the `.exe`.
+
+---
+
+### 🧪 What `build.ps1` Does
+
+* Installs **PyInstaller** and other dependencies (if needed).
+* Uses `pyinstaller` to create a **standalone executable**.
+* Embeds:
+
+  * `icon.ico` as the app icon.
+  * Version metadata (Product name, Company, File version).
+* Outputs:
+
+  * `dist/VideoFolderCleaner.exe`
+  * Logfile: `cleaner_log.txt`
+
+---
+
+## 📁 Output
+
+After building, you’ll find your finished `.exe` in the `dist/` directory, ready to share or run on any Windows machine without installation.
+
+---
+
+## 📄 License
+
+This project is licensed under the GPT3 License. Feel free to use and modify it.
+
+---
